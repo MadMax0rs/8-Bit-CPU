@@ -3305,3 +3305,6 @@ for i in range(len(Chips)):
     })
 	y += 1
 	ID += 1
+
+with open(f"D:\DigitalLogicSim\python\8-Bit-CPU\INS_ROM\OR8x{len(Chips)}-1.json", "w", encoding="utf-8") as file:
+	file.write(json.dumps(JSON))
