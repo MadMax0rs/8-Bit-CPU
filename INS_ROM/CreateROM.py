@@ -3261,50 +3261,48 @@ Chips = {
     ]
 }
 
-ID=50
-
-with open(f"D:\DigitalLogicSim\python\8-Bit-CPU\INS_ROM\OR8.json", "r", encoding="utf-8") as file:
-	OR8JSON = json.loads(file.read())
+ID = 50
+y = 0
 
 
-JSON = {
-	"DLSVersion": "2.1.6",
-	"Name": f"OR8x{len(Chips)}-1",
-	"NameLocation":0,
-	"ChipType":0,
-	"Size": {
-		"x": 3.0,
-		"y": float(len(Chips))/2.0
-	},
-  "Colour": {
-    "r": 0.63920635,
-    "g": 0.394323468,
-    "b": 0.386649,
-    "a": 1
-  },
-  "InputPins":[],
-  "OutputPins":[],
-  "SubChips":[],
-  "Wires":[],
-  "Displays": None
-}
+JSON = {}
+with open(f"D:/DigitalLogicSim/python/8-Bit-CPU/INS_ROM/INS_ROM-original.json", "r", encoding="utf-8") as file:
+	JSON = json.loads(file.read())
 
-y = 0.0
+	
+InputPinNames = []
 
-for i in range(len(Chips)):
-	JSON["InputPins"].append({
-      "Name":"IN",
-      "ID":ID,
-      "Position":{
-        "x":-4.5,
-        "y":y
-      },
-      "BitCount":8,
-      "Colour":0,
-      "ValueDisplayMode":0
-    })
-	y += 1
+for Pin in JSON["InputPins"]:
+	InputPinNames.append(Pin["Name"])
+	
+
+for Instruction in Chips:
+	InstructionJ = {}
+	with open(f"D:/DigitalLogicSim/python/8-Bit-CPU/ResizedChips/{Instruction}.json", "r", encoding="utf-8") as file:
+		InstructionJ = json.loads(file.read())
+
+	
+	SubChip = {
+		"Name":Instruction,
+		"ID":ID,
+		"Label":"",
+		"Position":{
+			"x":-14.6025,
+			"y":y
+		},
+		"OutputPinColourInfo":[],
+		"InternalData":None
+	}
 	ID += 1
+	y += 5.0625
 
-with open(f"D:\DigitalLogicSim\python\8-Bit-CPU\INS_ROM\OR8x{len(Chips)}-1.json", "w", encoding="utf-8") as file:
-	file.write(json.dumps(JSON))
+	for OutputPin in InstructionJ["OutputPins"]:
+		SubChip["OutputPinColourInfo"].append({"PinColour":0,"PinID":OutputPin["ID"]})
+	
+	JSON["SubChips"].append(SubChip)
+
+
+
+
+with open(f"D:/DigitalLogicSim/python/8-Bit-CPU/INS_ROM/INS_ROM.json", "w", encoding="utf-8") as file:
+	file.write(json.dumps(JSON).encode().decode('unicode-escape'))
