@@ -3261,7 +3261,7 @@ Chips = {
     ]
 }
 
-ID = 50
+ID = 0
 y = 0
 
 
@@ -3269,12 +3269,48 @@ JSON = {}
 with open(f"D:/DigitalLogicSim/python/8-Bit-CPU/INS_ROM/INS_ROM-original.json", "r", encoding="utf-8") as file:
 	JSON = json.loads(file.read())
 
+InstrucStdJSON = {}
+with open(f"D:/DigitalLogicSim/python/8-Bit-CPU/INS_ROM/INSTRUC_STD.json", "r", encoding="utf-8") as file:
+	InstrucStdJSON = json.loads(file.read())
+
+OrJSON = {}
+with open(f"D:/DigitalLogicSim/python/8-Bit-CPU/INS_ROM/OR256x8-8.json", "r", encoding="utf-8") as file:
+	OrJSON = json.loads(file.read())
+
 	
 InputPinNames = []
 
 for Pin in JSON["InputPins"]:
 	InputPinNames.append(Pin["Name"])
 	
+InstrucStdInputPins = []
+for Pin in InstrucStdJSON["InputPins"]:
+	InstrucStdInputPins.append(Pin["Name"])
+
+OrY = 0
+SubChip = {
+	"Name":"OR256x8-8",
+	"ID":ID,
+	"Label":"",
+	"Position":{
+		"x":18,
+		"y":OrY
+	},
+	"OutputPinColourInfo":[],
+	"InternalData":None
+}
+for Pin in OrJSON["OutputPins"]:
+	SubChip["OutputPinColourInfo"].append({
+		"PinColour":0,
+		"PinID":Pin["ID"]
+	})
+
+for i in range(69): # Loop over every microinstruction
+	SubChip["ID"] = ID
+	SubChip["Position"]["y"] = OrY
+	JSON["SubChips"].append(SubChip)
+	ID += 1
+	OrY += 128.125
 
 for Instruction in Chips:
 	InstructionJ = {}
@@ -3287,7 +3323,7 @@ for Instruction in Chips:
 		"ID":ID,
 		"Label":"",
 		"Position":{
-			"x":-14.6025,
+			"x":18,
 			"y":y
 		},
 		"OutputPinColourInfo":[],
