@@ -3265,15 +3265,15 @@ ID = 50
 y = 17.0625
 
 J = {}
-with open(f"D:\DigitalLogicSim\python\8-Bit-CPU\INS_ROM\INS_ROM.json", "r", encoding="utf-8") as file:
+with open(f"D:/DigitalLogicSim/python/8-Bit-CPU/INS_ROM/INS_ROM.json", "r", encoding="utf-8") as file:
 	J = json.loads(file.read())
 
 for SubChip in J["SubChips"]:
 	InstructionJ = {}
-	with open(f"D:\DigitalLogicSim\python\8-Bit-CPU\ResizedChips\{SubChip["Name"]}.json", "r", encoding="utf-8") as file:
+	with open(f"D:/DigitalLogicSim/python/8-Bit-CPU/ResizedChips/{SubChip["Name"]}.json", "r", encoding="utf-8") as file:
 		InstructionJ = json.loads(file.read())
 
 	
 
-with open(f"D:\DigitalLogicSim\python\8-Bit-CPU\INS_ROM\INS_ROM-OR.json", "w", encoding="utf-8") as file:
+with open(f"D:/DigitalLogicSim/python/8-Bit-CPU/INS_ROM/INS_ROM-OR.json", "w", encoding="utf-8") as file:
 	file.write(json.dumps(J).encode().decode('unicode-escape'))

@@ -3263,8 +3263,8 @@ Chips = {
 
 for Instruction in Chips:
 	j = {}
-	with open(f"D:\DigitalLogicSim\python\8-Bit-CPU\GenChips\{Instruction}.json", "r", encoding="utf-8") as file:
+	with open(f"D:/DigitalLogicSim/python/8-Bit-CPU/GenChips/{Instruction}.json", "r", encoding="utf-8") as file:
 		j = json.loads(file.read())
 	j["Size"]["y"] = 5.0
-	with open(f"D:\DigitalLogicSim\python\8-Bit-CPU\ResizedChips\{Instruction}.json", "w", encoding="utf-8") as file:
+	with open(f"D:/DigitalLogicSim/python/8-Bit-CPU/ResizedChips/{Instruction}.json", "w", encoding="utf-8") as file:
 		file.write(json.dumps(j).encode().decode('unicode-escape'))

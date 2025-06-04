@@ -1,4 +1,5 @@
 import json
+import copy
 
 Chips = {
     "NOP":[
@@ -3266,16 +3267,34 @@ y = 0
 
 
 JSON = {}
-with open(f"D:/DigitalLogicSim/python/8-Bit-CPU/INS_ROM/INS_ROM-original.json", "r", encoding="utf-8") as file:
+with open(f"D:/DigitalLogicSim/python/8-Bit-CPU/INS_ROM/JSON/INS_ROM-original.json", "r", encoding="utf-8") as file:
 	JSON = json.loads(file.read())
 
 InstrucStdJSON = {}
-with open(f"D:/DigitalLogicSim/python/8-Bit-CPU/INS_ROM/INSTRUC_STD.json", "r", encoding="utf-8") as file:
+with open(f"D:/DigitalLogicSim/python/8-Bit-CPU/INSTRUC_STD.json", "r", encoding="utf-8") as file:
 	InstrucStdJSON = json.loads(file.read())
 
 OrJSON = {}
-with open(f"D:/DigitalLogicSim/python/8-Bit-CPU/INS_ROM/OR256x8-8.json", "r", encoding="utf-8") as file:
+with open(f"D:/DigitalLogicSim/python/8-Bit-CPU/INS_ROM/JSON/OR256x8-8.json", "r", encoding="utf-8") as file:
 	OrJSON = json.loads(file.read())
+
+InsRomBitConverterJSON = {}
+with open(f"D:/DigitalLogicSim/python/8-Bit-CPU/INS_ROM/JSON/INS-ROM8-1bit.json", "r", encoding="utf-8") as file:
+	InsRomBitConverterJSON = json.loads(file.read())
+
+WeaverJSON = {}
+with open(f"D:/DigitalLogicSim/python/8-Bit-CPU/INS_ROM/JSON/INS-ROM_WEAVER.json", "r", encoding="utf-8") as file:
+	WeaverJSON = json.loads(file.read())
+
+SplitterJSON = {}
+with open(f"D:/DigitalLogicSim/python/8-Bit-CPU/INS_ROM/JSON/8x32-1x256.json", "r", encoding="utf-8") as file:
+	SplitterJSON = json.loads(file.read())
+
+
+
+
+BitSplitterSubChip = [d for d in JSON["SubChips"] if d["Name"] == "8x32-1x256"][0]
+CycleInputID = [d["ID"] for d in JSON["InputPins"] if d["Name"] == "CYCLE"][0]
 
 	
 InputPinNames = []
@@ -3287,13 +3306,44 @@ InstrucStdInputPins = []
 for Pin in InstrucStdJSON["InputPins"]:
 	InstrucStdInputPins.append(Pin["Name"])
 
+# Add the Weaver
+WeaverID = ID
+SubChip = {
+	"Name":"INS-ROM_WEAVER",
+	"ID":ID,
+	"Label":"",
+	"Position":{
+		"x":50,
+		"y":0
+	},
+	"OutputPinColourInfo":[],
+	"InternalData":None
+}
+ID += 1
+for Pin in WeaverJSON["OutputPins"]:
+	SubChip["OutputPinColourInfo"].append({
+		"PinColour":0,
+		"PinID":Pin["ID"]
+	})
+
+
+JSON["SubChips"].append(copy.deepcopy(SubChip))
+# End Add the Weaver
+
+
+
+
+
+
+# Add the ORs
 OrY = 0
+Or0ID = ID
 SubChip = {
 	"Name":"OR256x8-8",
 	"ID":ID,
 	"Label":"",
 	"Position":{
-		"x":18,
+		"x":60,
 		"y":OrY
 	},
 	"OutputPinColourInfo":[],
@@ -3305,17 +3355,45 @@ for Pin in OrJSON["OutputPins"]:
 		"PinID":Pin["ID"]
 	})
 
-for i in range(69): # Loop over every microinstruction
+INS_ROM8_1_bit = [d["ID"] for d in JSON["SubChips"] if d["Name"] == "INS-ROM8-1bit"][0]
+for InstructionInt in range(10): # Loop over every microinstruction line
 	SubChip["ID"] = ID
 	SubChip["Position"]["y"] = OrY
-	JSON["SubChips"].append(SubChip)
+	JSON["SubChips"].append(copy.deepcopy(SubChip))
 	ID += 1
 	OrY += 128.125
 
+	JSON["Wires"].append({
+		"SourcePinAddress":{
+			"PinID":OrJSON["OutputPins"][0]["ID"],
+			"PinOwnerID":ID - 1
+		},
+		"TargetPinAddress":{
+			# 9-i because the first OR generated is at the bottom, so it should attach to the bottom, so flip it
+			"PinID":InsRomBitConverterJSON["InputPins"][9-InstructionInt]["ID"],
+			"PinOwnerID":INS_ROM8_1_bit
+		},
+		"ConnectionType":0,
+		"ConnectedWireIndex":-1,
+		"ConnectedWireSegmentIndex":-1,
+		"Points":[{"x":0.0,"y":0.0},{"x":0.0,"y":0.0}]
+	})
+
+# End Add the ORs
+
+
+
+
+InstructionInt = 0
+
+# TEST FOR JUST ONE INSTRUCTION
+#Chips = {"MOV_REG_IMM": Chips["MOV_REG_IMM"]}
+
 for Instruction in Chips:
-	InstructionJ = {}
+	# Add the Instruction Chips
+	InstructionJSON = {}
 	with open(f"D:/DigitalLogicSim/python/8-Bit-CPU/ResizedChips/{Instruction}.json", "r", encoding="utf-8") as file:
-		InstructionJ = json.loads(file.read())
+		InstructionJSON = json.loads(file.read())
 
 	
 	SubChip = {
@@ -3332,13 +3410,111 @@ for Instruction in Chips:
 	ID += 1
 	y += 5.0625
 
-	for OutputPin in InstructionJ["OutputPins"]:
+	for OutputPin in InstructionJSON["OutputPins"]:
 		SubChip["OutputPinColourInfo"].append({"PinColour":0,"PinID":OutputPin["ID"]})
 	
-	JSON["SubChips"].append(SubChip)
+	JSON["SubChips"].append(copy.deepcopy(SubChip))
+
+	# Add the Clock Wire to the Instruction Chips
+	JSON["Wires"].append({
+		"SourcePinAddress":{
+			"PinID":SplitterJSON["OutputPins"][InstructionInt]["ID"],
+			"PinOwnerID":BitSplitterSubChip["ID"]
+		},
+		"TargetPinAddress":{
+			"PinID":[d["ID"] for d in InstructionJSON["InputPins"] if d["Name"] == "CLK"][0],
+			"PinOwnerID":ID - 1
+		},
+		"ConnectionType":0,
+		"ConnectedWireIndex":-1,
+		"ConnectedWireSegmentIndex":-1,
+		"Points":[{"x":0.0,"y":0.0},{"x":0.0,"y":0.0}]
+	})
+	# End Add the Clock Wire to the Instruction Chips
+
+	for microinstruction in range(10):
+		# Add wires from Instructions to Weaver
+		JSON["Wires"].append({
+			"SourcePinAddress":{
+				"PinID": InstructionJSON["OutputPins"][microinstruction]["ID"],
+				"PinOwnerID":ID - 1
+			},
+			"TargetPinAddress":{
+				# Would be [i*10+microinstruction] but it needs to be inverted 
+				"PinID":WeaverJSON["InputPins"][(InstructionInt + 1)*10-1-microinstruction]["ID"],
+				"PinOwnerID":WeaverID
+			},
+			"ConnectionType":0,
+			"ConnectedWireIndex":-1,
+			"ConnectedWireSegmentIndex":-1,
+			"Points":[{"x":0.0,"y":0.0},{"x":0.0,"y":0.0}]
+		})
+		# End Add wires from Instructions to Weaver
+
+	# Add wire form CYCLE to intruction
+	JSON["Wires"].append({
+		"SourcePinAddress":{
+			"PinID":0,
+			"PinOwnerID":CycleInputID
+		},
+		"TargetPinAddress":{
+			"PinID":[d["ID"] for d in InstructionJSON["InputPins"] if d["Name"] == "CYCLE"][0],
+			"PinOwnerID":ID - 1
+		},
+		"ConnectionType":0,
+		"ConnectedWireIndex":-1,
+		"ConnectedWireSegmentIndex":-1,
+		"Points":[{"x":0.0,"y":0.0},{"x":0.0,"y":0.0}]
+	})
+
+	InstructionFlagsPins = [d["ID"] for d in InstructionJSON["InputPins"] if d["Name"] == "FLAGS"]
+	if (len(InstructionFlagsPins) > 0):
+		# Add wire from FLAGS to instruction
+		JSON["Wires"].append({
+			"SourcePinAddress":{
+				"PinID":0,
+				"PinOwnerID":[d["ID"] for d in JSON["InputPins"] if d["Name"] == "FLAGS"][0]
+			},
+			"TargetPinAddress":{
+				"PinID":InstructionFlagsPins[0],
+				"PinOwnerID":ID - 1
+			},
+			"ConnectionType":0,
+			"ConnectedWireIndex":-1,
+			"ConnectedWireSegmentIndex":-1,
+			"Points":[{"x":0.0,"y":0.0},{"x":0.0,"y":0.0}]
+		})
+	# End Add the Instruction Chips
+
+
+	InstructionInt += 1
 
 
 
+numInstructions = 256
+numMicroinstructionLines = 10
 
-with open(f"D:/DigitalLogicSim/python/8-Bit-CPU/INS_ROM/INS_ROM.json", "w", encoding="utf-8") as file:
+# 10 8-bit lines for microinstructions, 256 instructions
+for instruc in range(numInstructions):
+	for microinstruc in range(numMicroinstructionLines):
+		# Add wires from WEAVER to OR
+		JSON["Wires"].append({
+			"SourcePinAddress":{
+				"PinID": (microinstruc*numInstructions + instruc)*2 + 1,
+				"PinOwnerID":WeaverID
+			},
+			"TargetPinAddress":{
+				# Would be [i*10+microinstruction] but it needs to be inverted 
+				"PinID":OrJSON["InputPins"][instruc]["ID"],
+				"PinOwnerID":Or0ID + microinstruc
+			},
+			"ConnectionType":0,
+			"ConnectedWireIndex":-1,
+			"ConnectedWireSegmentIndex":-1,
+			"Points":[{"x":0.0,"y":0.0},{"x":0.0,"y":0.0}]
+		})
+		# End Add wires from WEAVER to OR
+
+
+with open(f"D:/DigitalLogicSim/python/8-Bit-CPU/INS_ROM/JSON/INS_ROM.json", "w", encoding="utf-8") as file:
 	file.write(json.dumps(JSON).encode().decode('unicode-escape'))

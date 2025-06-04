@@ -3264,17 +3264,17 @@ ChipsToCreate = {
     ]
 }
 
-with open("D:\DigitalLogicSim\python\8-Bit-CPU\GenChips\ProjectDescription.json", "r", encoding="utf-8") as file:
+with open("D:/DigitalLogicSim/python/8-Bit-CPU/GenChips/ProjectDescription.json", "r", encoding="utf-8") as file:
 	ProjectDescriptionStr: str = file.read()
 	ProjectDescriptionObj = json.loads(ProjectDescriptionStr)
 
-with open("D:\DigitalLogicSim\python\8-Bit-CPU\INS_ROM1-8bit.json", "r", encoding="utf-8") as file:
+with open("D:/DigitalLogicSim/python/8-Bit-CPU/INS_ROM1-8bit.json", "r", encoding="utf-8") as file:
 	InsRom: dict = json.loads(file.read())
 
-with open("D:\DigitalLogicSim\python\8-Bit-CPU\InstrucCycleBase.json", "r", encoding="utf-8") as file:
+with open("D:/DigitalLogicSim/python/8-Bit-CPU/InstrucCycleBase.json", "r", encoding="utf-8") as file:
 	InstrucCycleBaseObj: dict = json.loads(file.read())
 
-with open("D:\DigitalLogicSim\python\8-Bit-CPU\InstrucBase.json", "r", encoding="utf-8") as file:
+with open("D:/DigitalLogicSim/python/8-Bit-CPU/InstrucBase.json", "r", encoding="utf-8") as file:
 	InstrucBaseObj: dict = json.loads(file.read())
 
 InputPins: dict = {}
@@ -3347,14 +3347,14 @@ for Name in ChipsToCreate:
 		mask[mask == 0] = digits
 		CurrentInstrucCycleObj["Wires"] = [wire for wire, m in zip(CurrentInstrucCycleObj["Wires"], mask) if m != 0]
 		
-		with open(f"D:\DigitalLogicSim\python\8-Bit-CPU\GenChips\\{Name}_{CycleNum}.json", "w", encoding="utf-8") as InstructionCycleFile: # Create file, if file already exists, throws error
+		with open(f"D:/DigitalLogicSim/python/8-Bit-CPU/GenChips//{Name}_{CycleNum}.json", "w", encoding="utf-8") as InstructionCycleFile: # Create file, if file already exists, throws error
 			InstructionCycleFile.write(json.dumps(CurrentInstrucCycleObj).encode().decode('unicode-escape'))
 
 
 
 	CurrentInstrucObj["Wires"] = [d for d in CurrentInstrucObj["Wires"] if d["TargetPinAddress"]["PinOwnerID"] not in RemovedSubchipIds and d["SourcePinAddress"]["PinOwnerID"] not in RemovedSubchipIds]
 
-	with open(f"D:\DigitalLogicSim\python\8-Bit-CPU\GenChips\\{Name}.json", "w", encoding="utf-8") as InstructionFile: # Create file, if file already exists, throws error
+	with open(f"D:/DigitalLogicSim/python/8-Bit-CPU/GenChips//{Name}.json", "w", encoding="utf-8") as InstructionFile: # Create file, if file already exists, throws error
 		InstructionFile.write(json.dumps(CurrentInstrucObj).encode().decode('unicode-escape'))
 
 # Remove duplicates
@@ -3368,6 +3368,6 @@ for collection in ProjectDescriptionObj["ChipCollections"]:
 		collection["Chips"] = OtherChips
 	elif collection["Name"] == "INS-ROM":
 		collection["Chips"] = InsRomChips
-with open("D:\DigitalLogicSim\python\8-Bit-CPU\GenChips\ProjectDescription.json", "w", encoding="utf-8") as file:
+with open("D:/DigitalLogicSim/python/8-Bit-CPU/GenChips/ProjectDescription.json", "w", encoding="utf-8") as file:
 	string = json.dumps(ProjectDescriptionObj).encode().decode('unicode-escape')
 	file.write(string)

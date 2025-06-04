@@ -44,6 +44,7 @@ for x in range(32):
 		})
 		ID += 1
 		yOutputs+=0.5
+
 	JSON["InputPins"].append({
 		"Name": "IN",
 		"ID": ID,
@@ -104,5 +105,5 @@ for x in range(32):
 		"Points":[{"x":0.0,"y":0.0},{"x":0.0,"y":0.0}]
 	})
 
-with open(f"D:\DigitalLogicSim\python\8-Bit-CPU\INS_ROM\8x32-1x256.json", "w", encoding="utf-8") as file:
+with open(f"D:/DigitalLogicSim/python/8-Bit-CPU/INS_ROM/JSON/8x32-1x256.json", "w", encoding="utf-8") as file:
 	file.write(json.dumps(JSON).encode().decode('unicode-escape'))
