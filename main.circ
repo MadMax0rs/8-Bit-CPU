@@ -85,7 +85,7 @@
   <lib desc="#BFH-Praktika" name="9"/>
   <lib desc="#Input/Output-Extra" name="10"/>
   <lib desc="#Soc" name="11"/>
-  <lib desc="file#..\8-Bit-CPU-INS_ROM\8-Bit-CPU-INS-ROM.circ" name="12"/>
+  <lib desc="file#8-Bit-CPU-INS_ROM\8-Bit-CPU-INS-ROM.circ" name="12"/>
   <main name="Computer"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -140,12 +140,6 @@
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="Computer"/>
     <a name="simulationFrequency" val="1.0"/>
-    <comp lib="0" loc="(510,510)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-    </comp>
-    <comp lib="0" loc="(510,530)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-    </comp>
     <comp lib="0" loc="(530,790)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="Clear"/>
@@ -175,27 +169,13 @@
       <a name="asyncread" val="true"/>
       <a name="trigger" val="falling"/>
     </comp>
-    <comp loc="(1000,470)" name="FullRAM"/>
     <comp loc="(750,750)" name="CPU"/>
-    <wire from="(1000,450)" to="(1000,470)"/>
-    <wire from="(1000,490)" to="(1010,490)"/>
-    <wire from="(1010,440)" to="(1010,490)"/>
     <wire from="(1130,1040)" to="(1140,1040)"/>
     <wire from="(1130,680)" to="(1130,780)"/>
     <wire from="(1140,670)" to="(1140,1040)"/>
-    <wire from="(510,510)" to="(540,510)"/>
-    <wire from="(510,530)" to="(540,530)"/>
-    <wire from="(520,440)" to="(1010,440)"/>
-    <wire from="(520,440)" to="(520,490)"/>
-    <wire from="(520,490)" to="(540,490)"/>
-    <wire from="(530,450)" to="(1000,450)"/>
-    <wire from="(530,450)" to="(530,470)"/>
-    <wire from="(530,470)" to="(540,470)"/>
     <wire from="(530,790)" to="(550,790)"/>
     <wire from="(530,810)" to="(540,810)"/>
     <wire from="(540,1020)" to="(760,1020)"/>
-    <wire from="(540,530)" to="(540,590)"/>
-    <wire from="(540,590)" to="(740,590)"/>
     <wire from="(540,670)" to="(1140,670)"/>
     <wire from="(540,670)" to="(540,770)"/>
     <wire from="(540,770)" to="(550,770)"/>
@@ -203,40 +183,22 @@
     <wire from="(540,810)" to="(550,810)"/>
     <wire from="(550,680)" to="(1130,680)"/>
     <wire from="(550,680)" to="(550,750)"/>
-    <wire from="(740,470)" to="(770,470)"/>
-    <wire from="(740,490)" to="(790,490)"/>
-    <wire from="(740,510)" to="(760,510)"/>
-    <wire from="(740,530)" to="(780,530)"/>
-    <wire from="(740,550)" to="(750,550)"/>
-    <wire from="(740,570)" to="(740,590)"/>
-    <wire from="(740,570)" to="(800,570)"/>
-    <wire from="(750,500)" to="(750,550)"/>
-    <wire from="(750,500)" to="(800,500)"/>
     <wire from="(750,750)" to="(890,750)"/>
     <wire from="(750,770)" to="(770,770)"/>
     <wire from="(750,790)" to="(780,790)"/>
     <wire from="(750,810)" to="(830,810)"/>
     <wire from="(750,830)" to="(880,830)"/>
     <wire from="(760,1020)" to="(890,1020)"/>
-    <wire from="(760,510)" to="(760,550)"/>
-    <wire from="(760,550)" to="(800,550)"/>
     <wire from="(760,760)" to="(760,1020)"/>
     <wire from="(760,760)" to="(890,760)"/>
     <wire from="(770,1010)" to="(890,1010)"/>
-    <wire from="(770,470)" to="(770,510)"/>
-    <wire from="(770,510)" to="(800,510)"/>
     <wire from="(770,770)" to="(770,1010)"/>
     <wire from="(770,770)" to="(820,770)"/>
     <wire from="(780,1000)" to="(890,1000)"/>
-    <wire from="(780,470)" to="(780,530)"/>
-    <wire from="(780,470)" to="(800,470)"/>
     <wire from="(780,740)" to="(780,790)"/>
     <wire from="(780,740)" to="(890,740)"/>
     <wire from="(780,790)" to="(780,930)"/>
     <wire from="(780,930)" to="(780,1000)"/>
-    <wire from="(790,490)" to="(790,530)"/>
-    <wire from="(790,530)" to="(800,530)"/>
-    <wire from="(800,490)" to="(800,500)"/>
     <wire from="(800,930)" to="(820,930)"/>
     <wire from="(820,770)" to="(820,910)"/>
     <wire from="(820,970)" to="(830,970)"/>
