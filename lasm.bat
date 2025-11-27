@@ -1,0 +1,1 @@
+python .\scripts\assembler\lasm.py /scripts/asm/%1.asm
