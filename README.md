@@ -1,4 +1,3 @@
-- The backups folder contains the latest version of the CPU
 - This project is made in [Logisim Evolution](https://github.com/logisim-evolution/logisim-evolution)
 
 # Downloading the CPU
