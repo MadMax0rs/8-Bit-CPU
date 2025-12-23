@@ -51,7 +51,9 @@ def GetImmediateBase(string: str) -> int:
 	if IsValidBin(string): return 2
 	if IsValidImmediate(string): return 10
 	return -1
-
+def GetImmediateAsInt(string: str) -> int:
+	if not IsValidImmediate(string): raise Exception()
+	return int(string, GetImmediateBase(string))
 class ArgType(Enum):
 	IMMEDIATE = 0
 	REGISTER = 1
@@ -284,7 +286,7 @@ class Argument:
 					return labels[self.arg]
 				if self.arg in checkLabels.values():
 					return b'\x00'
-				return int(self.arg).to_bytes()
+				return GetImmediateAsInt(self.arg).to_bytes()
 			case ArgType.REGISTER:
 				return registers[self.arg].to_bytes()
 			case ArgType.MEMORY_ADDR:
@@ -427,6 +429,18 @@ if len(checkLabels) > 0:
 		print("Unknown Argument:", label)
 
 print("outBytes:", outBytes)
-print(f"outPath: {os.path.dirname(path)}/{str(Path(path).stem)}.bin")
-with open(f"{os.path.dirname(path)}/{str(Path(path).stem)}.bin", "bw") as outFile:
+
+outPath = f"{os.path.dirname(path)}/{str(Path(path).stem)}"
+print("outPath:", outPath)
+
+with open(f"{outPath}.bin", "bw") as outFile:
 	outFile.write(outBytes)
+
+
+toWrite: str = "v3.0 hex words addressed\n00:"
+for byte in outBytes:
+	hexStr: str = hex(byte)[2:]
+	toWrite += " " + "0"*(2-len(hexStr)) + hexStr
+
+with open(f"{outPath}.hex", "w") as file:
+	file.write(toWrite)

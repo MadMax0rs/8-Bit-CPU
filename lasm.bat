@@ -1,1 +1,1 @@
-python .\scripts\assembler\lasm.py /scripts/asm/%1.asm
+python .\assembler\lasm.py /docs/examples/%1/%1.asm

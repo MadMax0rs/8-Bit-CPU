@@ -14,7 +14,7 @@ je exit
 add reg0, reg1
 ; Make reg1 the big one again
 xchg reg0, reg1
-sub reg2, 1; dec reg2
+sub reg2, 1
 jmp loop
 
 ; Addr: 26
