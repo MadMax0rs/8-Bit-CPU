@@ -111,3 +111,27 @@ None
 | register | register | 0x42   |
 | register | mem addr | 0x43   |
 | mem addr | mem addr | 0x44   |
+
+## IN &mdash; In
+
+### Syntax
+```asm
+IN inPin, dst
+```
+
+### Argument Types
+| Arg  | Memory address | Register | Immediate |
+|------|----------------|----------|-----------|
+| inPin| &cross;        | &check;  | &cross;   |
+| dst  | &cross;        | &check;  | &cross;   |
+
+### Operation
+dst &larr; inPin
+
+### Flags affected
+None
+
+### Encoding
+| dst type | inPin type | Opcode |
+|----------|------------|--------|
+| register | register   | 0x69   |

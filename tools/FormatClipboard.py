@@ -43,7 +43,7 @@ html += '''
 	console.log(arr)
 </script>'''
 
-with open("D:\\Logisim\\8-bit-CPU\\clipboard.html", "w") as file:
+with open("D:\\Logisim\\8-bit-CPU\\tools\\clipboard.html", "w") as file:
 	file.write(html)
 
 
@@ -72,6 +72,7 @@ for row in rows:
 
 
 #print("\n\n\n\n\n\n\n\n\n\n\n", table)
+
 
 # "NOP":
 # "MOV_REG_IMM":
@@ -176,6 +177,9 @@ for row in rows:
 # "JO_REG":
 # "JNO_IMM":
 # "JNO_REG":
+# "PAGE_IMM":
+# "PAGE_REG":
+# "IN":
 
 
 cb.CloseClipboard()

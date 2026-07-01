@@ -21,3 +21,4 @@ jmp loop
 exit:
 ; Output
 mov [0x24], reg0
+hlt

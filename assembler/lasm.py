@@ -8,6 +8,12 @@ checkLabels: dict[int, str] = {}
 bytesWritten: int = 0
 outBytes: bytes = b''
 
+inputPins: dict[str, int] = {
+	"i0" : 0,
+	"i1" : 1,
+	"i2" : 2,
+	"i3" : 3,
+}
 registers: dict[str, int] = {
 	"reg0" : 0,
 	"r0" : 0,
@@ -22,7 +28,12 @@ registers: dict[str, int] = {
 	"reg5" : 5,
 	"r5" : 5,
 	"reg6" : 6,
-	"r6" : 6
+	"r6" : 6,
+
+	"p3" : 15,
+	"p2" : 14,
+	"p1" : 13,
+	"p0" : 12,
 }
 
 def IsValidHex(string: str) -> bool:
@@ -58,7 +69,8 @@ class ArgType(Enum):
 	IMMEDIATE = 0
 	REGISTER = 1
 	MEMORY_ADDR = 2
-	NONE = 3
+	INPUT_PIN = 3
+	NONE = 4
 
 def argumentStringToType(arg: str, argIndex: int) -> ArgType:
 	global bytesWritten
@@ -73,6 +85,8 @@ def argumentStringToType(arg: str, argIndex: int) -> ArgType:
 	
 	if registers.__contains__(arg):
 		return ArgType.REGISTER
+	if inputPins.__contains__(arg):
+		return ArgType.INPUT_PIN
 	if IsValidImmediate(arg):
 		return ArgType.IMMEDIATE
 	if arg == "":
@@ -99,39 +113,42 @@ Aliases: dict[str, str] = {
 	"jpo": "jnp",
 }
 Args: dict[str, list[list[ArgType]]] = {
-	"nop": [],
-	"mov": [[ArgType.REGISTER,ArgType.MEMORY_ADDR], [ArgType.IMMEDIATE,ArgType.REGISTER,ArgType.MEMORY_ADDR]],
-	"add": [[ArgType.REGISTER,ArgType.MEMORY_ADDR], [ArgType.IMMEDIATE,ArgType.REGISTER,ArgType.MEMORY_ADDR]],
-	"sub": [[ArgType.REGISTER,ArgType.MEMORY_ADDR], [ArgType.IMMEDIATE,ArgType.REGISTER,ArgType.MEMORY_ADDR]],
-	"mul": [[ArgType.REGISTER,ArgType.MEMORY_ADDR], [ArgType.IMMEDIATE,ArgType.REGISTER,ArgType.MEMORY_ADDR]],
-	"div": [[ArgType.REGISTER,ArgType.MEMORY_ADDR], [ArgType.IMMEDIATE,ArgType.REGISTER,ArgType.MEMORY_ADDR]],
-	"push": [[ArgType.IMMEDIATE,ArgType.REGISTER,ArgType.MEMORY_ADDR]],
-	"pop": [[ArgType.REGISTER,ArgType.MEMORY_ADDR]],   
-	"shl": [[ArgType.REGISTER], [ArgType.IMMEDIATE,ArgType.REGISTER]],
-	"shr": [[ArgType.REGISTER], [ArgType.IMMEDIATE,ArgType.REGISTER]],
-	"and": [[ArgType.REGISTER,ArgType.MEMORY_ADDR], [ArgType.IMMEDIATE,ArgType.REGISTER,ArgType.MEMORY_ADDR]],
-	"or": [[ArgType.REGISTER,ArgType.MEMORY_ADDR], [ArgType.IMMEDIATE,ArgType.REGISTER,ArgType.MEMORY_ADDR]],
-	"xor": [[ArgType.REGISTER,ArgType.MEMORY_ADDR], [ArgType.IMMEDIATE,ArgType.REGISTER,ArgType.MEMORY_ADDR]],
-	"not": [[ArgType.REGISTER,ArgType.MEMORY_ADDR]],   
-	"cmp": [[ArgType.REGISTER,ArgType.MEMORY_ADDR], [ArgType.IMMEDIATE,ArgType.REGISTER,ArgType.MEMORY_ADDR]],
-	"xchg": [[ArgType.REGISTER,ArgType.MEMORY_ADDR], [ArgType.REGISTER,ArgType.MEMORY_ADDR]],
-	"jmp": [[ArgType.IMMEDIATE,ArgType.REGISTER]],     
-	"jz": [[ArgType.IMMEDIATE,ArgType.REGISTER]],      
-	"jnz": [[ArgType.IMMEDIATE,ArgType.REGISTER]],     
-	"js": [[ArgType.IMMEDIATE,ArgType.REGISTER]],      
-	"jns": [[ArgType.IMMEDIATE,ArgType.REGISTER]],     
-	"jg": [[ArgType.IMMEDIATE,ArgType.REGISTER]],      
-	"jge": [[ArgType.IMMEDIATE,ArgType.REGISTER]],     
-	"jl": [[ArgType.IMMEDIATE,ArgType.REGISTER]],      
-	"jle": [[ArgType.IMMEDIATE,ArgType.REGISTER]],     
-	"ja": [[ArgType.IMMEDIATE,ArgType.REGISTER]],      
-	"jae": [[ArgType.IMMEDIATE,ArgType.REGISTER]],     
-	"jb": [[ArgType.IMMEDIATE,ArgType.REGISTER]],      
-	"jbe": [[ArgType.IMMEDIATE,ArgType.REGISTER]],     
-	"jp": [[ArgType.IMMEDIATE,ArgType.REGISTER]],      
-	"jnp": [[ArgType.IMMEDIATE,ArgType.REGISTER]],     
-	"jo": [[ArgType.IMMEDIATE,ArgType.REGISTER]],
-	"jno": [[ArgType.IMMEDIATE,ArgType.REGISTER]]
+	"nop":	[],
+	"mov":	[[ArgType.REGISTER,ArgType.MEMORY_ADDR], 					[ArgType.IMMEDIATE,ArgType.REGISTER,ArgType.MEMORY_ADDR]],
+	"add":	[[ArgType.REGISTER,ArgType.MEMORY_ADDR], 					[ArgType.IMMEDIATE,ArgType.REGISTER,ArgType.MEMORY_ADDR]],
+	"sub":	[[ArgType.REGISTER,ArgType.MEMORY_ADDR], 					[ArgType.IMMEDIATE,ArgType.REGISTER,ArgType.MEMORY_ADDR]],
+	"mul":	[[ArgType.REGISTER,ArgType.MEMORY_ADDR], 					[ArgType.IMMEDIATE,ArgType.REGISTER,ArgType.MEMORY_ADDR]],
+	"div":	[[ArgType.REGISTER,ArgType.MEMORY_ADDR], 					[ArgType.IMMEDIATE,ArgType.REGISTER,ArgType.MEMORY_ADDR]],
+	"push":	[[ArgType.IMMEDIATE,ArgType.REGISTER,ArgType.MEMORY_ADDR]															],
+	"pop":	[[ArgType.REGISTER,ArgType.MEMORY_ADDR]																				],
+	"shl":	[[ArgType.REGISTER],										[ArgType.IMMEDIATE,ArgType.REGISTER]					],
+	"shr":	[[ArgType.REGISTER],										[ArgType.IMMEDIATE,ArgType.REGISTER]					],
+	"and":	[[ArgType.REGISTER,ArgType.MEMORY_ADDR], 					[ArgType.IMMEDIATE,ArgType.REGISTER,ArgType.MEMORY_ADDR]],
+	"or":	[[ArgType.REGISTER,ArgType.MEMORY_ADDR], 					[ArgType.IMMEDIATE,ArgType.REGISTER,ArgType.MEMORY_ADDR]],
+	"xor":	[[ArgType.REGISTER,ArgType.MEMORY_ADDR], 					[ArgType.IMMEDIATE,ArgType.REGISTER,ArgType.MEMORY_ADDR]],
+	"not":	[[ArgType.REGISTER,ArgType.MEMORY_ADDR]																				],   
+	"cmp":	[[ArgType.REGISTER,ArgType.MEMORY_ADDR], 					[ArgType.IMMEDIATE,ArgType.REGISTER,ArgType.MEMORY_ADDR]],
+	"xchg":	[[ArgType.REGISTER,ArgType.MEMORY_ADDR], 					[ArgType.REGISTER,ArgType.MEMORY_ADDR]					],
+	"jmp":	[[ArgType.IMMEDIATE,ArgType.REGISTER]																				],     
+	"jz":	[[ArgType.IMMEDIATE,ArgType.REGISTER]																				],      
+	"jnz":	[[ArgType.IMMEDIATE,ArgType.REGISTER]																				],     
+	"js":	[[ArgType.IMMEDIATE,ArgType.REGISTER]																				],      
+	"jns":	[[ArgType.IMMEDIATE,ArgType.REGISTER]																				],     
+	"jg":	[[ArgType.IMMEDIATE,ArgType.REGISTER]																				],      
+	"jge":	[[ArgType.IMMEDIATE,ArgType.REGISTER]																				],     
+	"jl":	[[ArgType.IMMEDIATE,ArgType.REGISTER]																				],      
+	"jle":	[[ArgType.IMMEDIATE,ArgType.REGISTER]																				],     
+	"ja":	[[ArgType.IMMEDIATE,ArgType.REGISTER]																				],      
+	"jae":	[[ArgType.IMMEDIATE,ArgType.REGISTER]																				],     
+	"jb":	[[ArgType.IMMEDIATE,ArgType.REGISTER]																				],      
+	"jbe":	[[ArgType.IMMEDIATE,ArgType.REGISTER]																				],     
+	"jp":	[[ArgType.IMMEDIATE,ArgType.REGISTER]																				],      
+	"jnp":	[[ArgType.IMMEDIATE,ArgType.REGISTER]																				],     
+	"jo":	[[ArgType.IMMEDIATE,ArgType.REGISTER]																				],
+	"jno":	[[ArgType.IMMEDIATE,ArgType.REGISTER]																				],
+	"page": [[ArgType.IMMEDIATE,ArgType.REGISTER]																				],
+	"in":	[[ArgType.INPUT_PIN],												[ArgType.REGISTER]										],
+	"hlt":	[]
 }
 Syntax: dict[str, str] = {
 	"nop": "",
@@ -166,7 +183,10 @@ Syntax: dict[str, str] = {
 	"jp": "<IMMEDIATE,REGISTER>",
 	"jnp": "<IMMEDIATE,REGISTER>",
 	"jo": "<IMMEDIATE,REGISTER>",
-	"jno": "<IMMEDIATE,REGISTER>"
+	"jno": "<IMMEDIATE,REGISTER>",
+	"page": "<IMMEDIATE,REGISTER>",
+	"in": "<PIN>, <REGISTER>",
+	"hlt": ""
 }
 InstrucID: dict[tuple[str, ArgType, ArgType], int] = {
 	("nop", ArgType.NONE, ArgType.NONE): 0,
@@ -271,7 +291,11 @@ InstrucID: dict[tuple[str, ArgType, ArgType], int] = {
 	("jo", ArgType.IMMEDIATE, ArgType.NONE): 99,
 	("jo", ArgType.REGISTER, ArgType.NONE): 100,
 	("jno", ArgType.IMMEDIATE, ArgType.NONE): 101,
-	("jno", ArgType.REGISTER, ArgType.NONE): 102
+	("jno", ArgType.REGISTER, ArgType.NONE): 102,
+	("page", ArgType.IMMEDIATE, ArgType.NONE): 103,
+	("page", ArgType.REGISTER, ArgType.NONE): 104,
+	("in", ArgType.INPUT_PIN, ArgType.REGISTER): 105,
+	("hlt", ArgType.NONE, ArgType.NONE): 0xFF,
 }
 
 class Argument:
@@ -291,6 +315,8 @@ class Argument:
 				return registers[self.arg].to_bytes()
 			case ArgType.MEMORY_ADDR:
 				return int(self.arg[1:-1], GetImmediateBase(self.arg[1:-1])).to_bytes()
+			case ArgType.INPUT_PIN:
+				return inputPins[self.arg].to_bytes()
 			case ArgType.NONE:
 				return b""
 			case _:

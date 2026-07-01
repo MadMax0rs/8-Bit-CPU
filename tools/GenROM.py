@@ -5,6 +5,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -15,6 +16,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -33,6 +35,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -43,6 +46,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MEM_read2",
@@ -66,6 +70,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -76,6 +81,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -90,6 +96,7 @@ data: dict[str, list[list[str]]] = {
             "MDR1-MAR",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -103,6 +110,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -113,6 +121,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MEM_read2",
@@ -133,6 +142,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -143,6 +153,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MEM_read2",
@@ -168,6 +179,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -178,6 +190,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -192,6 +205,7 @@ data: dict[str, list[list[str]]] = {
             "MDR1-MAR",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write"
         ],
@@ -209,6 +223,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -219,6 +234,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MEM_read2",
@@ -251,6 +267,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -261,6 +278,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MEM_read2",
@@ -300,6 +318,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -310,6 +329,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -324,6 +344,7 @@ data: dict[str, list[list[str]]] = {
             "MDR1-MAR",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR2_read",
@@ -353,6 +374,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -363,6 +385,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -377,6 +400,7 @@ data: dict[str, list[list[str]]] = {
             "MDR2-MAR",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -400,6 +424,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -410,6 +435,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MEM_read2",
@@ -429,6 +455,7 @@ data: dict[str, list[list[str]]] = {
         [
             "IP_inc",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -451,6 +478,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -461,6 +489,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -475,6 +504,7 @@ data: dict[str, list[list[str]]] = {
             "MDR1-MAR",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write"
         ],
@@ -489,6 +519,7 @@ data: dict[str, list[list[str]]] = {
         ],
         [
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR1_read",
@@ -511,6 +542,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -521,6 +553,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MEM_read2",
@@ -553,6 +586,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -563,6 +597,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MEM_read2",
@@ -602,6 +637,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -612,6 +648,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -626,6 +663,7 @@ data: dict[str, list[list[str]]] = {
             "MDR1-MAR",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR2_read",
@@ -655,6 +693,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -665,6 +704,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -679,6 +719,7 @@ data: dict[str, list[list[str]]] = {
             "MDR2-MAR",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -702,6 +743,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -712,6 +754,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MEM_read2",
@@ -731,6 +774,7 @@ data: dict[str, list[list[str]]] = {
         [
             "IP_inc",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -753,6 +797,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -763,6 +808,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -777,6 +823,7 @@ data: dict[str, list[list[str]]] = {
             "MDR1-MAR",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write"
         ],
@@ -791,6 +838,7 @@ data: dict[str, list[list[str]]] = {
         ],
         [
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -813,6 +861,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -823,6 +872,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MEM_read2",
@@ -855,6 +905,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -865,6 +916,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MEM_read2",
@@ -904,6 +956,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -914,6 +967,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -928,6 +982,7 @@ data: dict[str, list[list[str]]] = {
             "MDR1-MAR",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR2_read",
@@ -957,6 +1012,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -967,6 +1023,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -981,6 +1038,7 @@ data: dict[str, list[list[str]]] = {
             "MDR2-MAR",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -1004,6 +1062,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -1014,6 +1073,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MEM_read2",
@@ -1033,6 +1093,7 @@ data: dict[str, list[list[str]]] = {
         [
             "IP_inc",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -1055,6 +1116,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -1065,6 +1127,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -1079,6 +1142,7 @@ data: dict[str, list[list[str]]] = {
             "MDR1-MAR",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write"
         ],
@@ -1093,6 +1157,7 @@ data: dict[str, list[list[str]]] = {
         ],
         [
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -1115,6 +1180,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -1125,6 +1191,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MEM_read2",
@@ -1165,6 +1232,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -1175,6 +1243,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MEM_read2",
@@ -1222,6 +1291,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -1232,6 +1302,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -1246,6 +1317,7 @@ data: dict[str, list[list[str]]] = {
             "MDR1-MAR",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR2_read",
@@ -1283,6 +1355,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -1293,6 +1366,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -1307,6 +1381,7 @@ data: dict[str, list[list[str]]] = {
             "MDR2-MAR",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -1330,6 +1405,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -1340,6 +1416,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MEM_read2",
@@ -1359,6 +1436,7 @@ data: dict[str, list[list[str]]] = {
         [
             "IP_inc",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -1381,6 +1459,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -1391,6 +1470,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -1405,6 +1485,7 @@ data: dict[str, list[list[str]]] = {
             "MDR1-MAR",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write"
         ],
@@ -1419,6 +1500,7 @@ data: dict[str, list[list[str]]] = {
         ],
         [
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -1441,6 +1523,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -1452,6 +1535,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write"
         ],
@@ -1468,6 +1552,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -1479,6 +1564,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0-REG_ID",
@@ -1499,6 +1585,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -1510,11 +1597,12 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
             "MDR0-MDR1",
-            "MDR1-write"
+            "MDR1_write"
         ],
         [
             "IP_inc",
@@ -1522,6 +1610,7 @@ data: dict[str, list[list[str]]] = {
             "MDR1-MAR",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write"
         ],
@@ -1537,6 +1626,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -1547,6 +1637,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -1558,6 +1649,7 @@ data: dict[str, list[list[str]]] = {
             "SP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -1575,6 +1667,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -1585,6 +1678,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -1596,6 +1690,7 @@ data: dict[str, list[list[str]]] = {
             "SP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write"
         ],
@@ -1617,6 +1712,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -1627,6 +1723,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MEM_read2",
@@ -1659,6 +1756,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -1669,6 +1767,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MEM_read2",
@@ -1708,6 +1807,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -1718,6 +1818,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MEM_read2",
@@ -1750,6 +1851,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -1760,6 +1862,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MEM_read2",
@@ -1799,6 +1902,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -1809,6 +1913,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MEM_read2",
@@ -1841,6 +1946,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -1851,6 +1957,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MEM_read2",
@@ -1890,6 +1997,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -1900,11 +2008,12 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
             "MDR0-MDR2",
-            "MDR2-write",
+            "MDR2_write",
             "MEM_read2",
             "MDR1_write"
         ],
@@ -1914,6 +2023,7 @@ data: dict[str, list[list[str]]] = {
             "MDR1-MAR",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write"
         ],
@@ -1945,6 +2055,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -1955,6 +2066,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -1969,6 +2081,7 @@ data: dict[str, list[list[str]]] = {
             "MDR2-MAR",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -1992,6 +2105,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -2002,6 +2116,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MEM_read2",
@@ -2021,6 +2136,7 @@ data: dict[str, list[list[str]]] = {
         [
             "IP_inc",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -2043,6 +2159,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -2053,6 +2170,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -2067,6 +2185,7 @@ data: dict[str, list[list[str]]] = {
             "MDR1-MAR",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write"
         ],
@@ -2081,6 +2200,7 @@ data: dict[str, list[list[str]]] = {
         ],
         [
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -2103,6 +2223,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -2113,6 +2234,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MEM_read2",
@@ -2145,6 +2267,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -2155,6 +2278,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MEM_read2",
@@ -2194,6 +2318,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -2204,11 +2329,12 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
             "MDR0-MDR2",
-            "MDR2-write",
+            "MDR2_write",
             "MEM_read2",
             "MDR1_write"
         ],
@@ -2218,6 +2344,7 @@ data: dict[str, list[list[str]]] = {
             "MDR1-MAR",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write"
         ],
@@ -2249,6 +2376,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -2259,6 +2387,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -2273,6 +2402,7 @@ data: dict[str, list[list[str]]] = {
             "MDR2-MAR",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -2296,6 +2426,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -2306,6 +2437,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MEM_read2",
@@ -2325,6 +2457,7 @@ data: dict[str, list[list[str]]] = {
         [
             "IP_inc",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -2347,6 +2480,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -2357,6 +2491,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -2371,6 +2506,7 @@ data: dict[str, list[list[str]]] = {
             "MDR1-MAR",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write"
         ],
@@ -2385,6 +2521,7 @@ data: dict[str, list[list[str]]] = {
         ],
         [
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -2407,6 +2544,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -2417,6 +2555,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MEM_read2",
@@ -2449,6 +2588,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -2459,6 +2599,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MEM_read2",
@@ -2498,6 +2639,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -2508,11 +2650,12 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
             "MDR0-MDR2",
-            "MDR2-write",
+            "MDR2_write",
             "MEM_read2",
             "MDR1_write"
         ],
@@ -2522,6 +2665,7 @@ data: dict[str, list[list[str]]] = {
             "MDR1-MAR",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write"
         ],
@@ -2553,6 +2697,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -2563,6 +2708,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -2577,6 +2723,7 @@ data: dict[str, list[list[str]]] = {
             "MDR2-MAR",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -2600,6 +2747,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -2610,6 +2758,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MEM_read2",
@@ -2629,6 +2778,7 @@ data: dict[str, list[list[str]]] = {
         [
             "IP_inc",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -2651,6 +2801,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -2661,6 +2812,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -2675,6 +2827,7 @@ data: dict[str, list[list[str]]] = {
             "MDR1-MAR",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write"
         ],
@@ -2689,6 +2842,7 @@ data: dict[str, list[list[str]]] = {
         ],
         [
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -2711,6 +2865,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -2721,6 +2876,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -2748,6 +2904,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -2758,6 +2915,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -2770,6 +2928,7 @@ data: dict[str, list[list[str]]] = {
             "MDR2-MAR",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -2789,6 +2948,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -2799,6 +2959,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MEM_read2",
@@ -2823,6 +2984,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -2833,6 +2995,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MEM_read2",
@@ -2862,6 +3025,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -2872,6 +3036,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -2886,6 +3051,7 @@ data: dict[str, list[list[str]]] = {
             "MDR1-MAR",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write"
         ],
@@ -2907,6 +3073,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -2917,6 +3084,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -2931,6 +3099,7 @@ data: dict[str, list[list[str]]] = {
             "MDR2-MAR",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -2945,6 +3114,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -2955,6 +3125,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MEM_read2",
@@ -2974,6 +3145,7 @@ data: dict[str, list[list[str]]] = {
         [
             "IP_inc",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -2987,6 +3159,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -2997,6 +3170,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -3011,6 +3185,7 @@ data: dict[str, list[list[str]]] = {
             "MDR1-MAR",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write"
         ],
@@ -3025,6 +3200,7 @@ data: dict[str, list[list[str]]] = {
         ],
         [
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -3038,6 +3214,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -3048,6 +3225,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MEM_read2",
@@ -3088,6 +3266,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -3098,6 +3277,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MEM_read2",
@@ -3117,6 +3297,7 @@ data: dict[str, list[list[str]]] = {
         [
             "IP_inc",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -3135,6 +3316,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -3145,6 +3327,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -3159,6 +3342,7 @@ data: dict[str, list[list[str]]] = {
             "MDR1-MAR",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write"
         ],
@@ -3175,6 +3359,7 @@ data: dict[str, list[list[str]]] = {
         ],
         [
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write"
         ],
@@ -3197,6 +3382,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -3207,6 +3393,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write"
         ],
@@ -3217,6 +3404,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -3227,6 +3415,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -3242,6 +3431,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -3252,6 +3442,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write"
         ],
@@ -3263,6 +3454,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -3273,6 +3465,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -3289,6 +3482,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -3299,6 +3493,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write"
         ],
@@ -3310,6 +3505,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -3320,6 +3516,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -3336,6 +3533,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -3346,6 +3544,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write"
         ],
@@ -3357,6 +3556,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -3367,6 +3567,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -3383,6 +3584,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -3393,6 +3595,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write"
         ],
@@ -3404,6 +3607,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -3414,6 +3618,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -3430,6 +3635,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -3440,6 +3646,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write"
         ],
@@ -3451,6 +3658,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -3461,6 +3669,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -3477,6 +3686,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -3487,6 +3697,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write"
         ],
@@ -3498,6 +3709,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -3508,6 +3720,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -3524,6 +3737,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -3534,6 +3748,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write"
         ],
@@ -3545,6 +3760,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -3555,6 +3771,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -3571,6 +3788,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -3581,6 +3799,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write"
         ],
@@ -3592,6 +3811,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -3602,6 +3822,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -3618,6 +3839,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -3628,6 +3850,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write"
         ],
@@ -3639,6 +3862,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -3649,6 +3873,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -3665,6 +3890,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -3675,6 +3901,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write"
         ],
@@ -3686,6 +3913,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -3696,6 +3924,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -3712,6 +3941,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -3722,6 +3952,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write"
         ],
@@ -3733,6 +3964,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -3743,6 +3975,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -3759,6 +3992,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -3769,6 +4003,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write"
         ],
@@ -3780,6 +4015,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -3790,6 +4026,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -3806,6 +4043,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -3816,6 +4054,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write"
         ],
@@ -3827,6 +4066,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -3837,6 +4077,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -3853,6 +4094,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -3863,6 +4105,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write"
         ],
@@ -3874,6 +4117,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -3884,6 +4128,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -3900,6 +4145,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -3910,6 +4156,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write"
         ],
@@ -3921,6 +4168,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -3931,6 +4179,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -3947,6 +4196,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -3957,6 +4207,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write"
         ],
@@ -3968,6 +4219,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
@@ -3978,6 +4230,7 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "MDR0_write",
             "MDR0_read",
@@ -3994,179 +4247,310 @@ data: dict[str, list[list[str]]] = {
             "IP_read",
             "MAR_write",
             "MAR_read",
+            "PAGE_read",
+            "MEM_read",
+            "CU_endInstruction"
+        ]
+    ],
+    "PAGE_IMM":[
+        [
+            "IP_inc",
+            "IP_read",
+            "MAR_write",
+            "MAR_read",
+            "PAGE_read",
+            "MEM_read",
+            "MDR0_write"
+        ],
+        [
+            "MDR0_read",
+            "PAGE_write",
+            "IP_read",
+            "MAR_write",
+            "MAR_read",
+            "PAGE_read",
+            "MEM_read",
+            "CU_endInstruction"
+        ]
+    ],
+    "PAGE_REG":[
+        [
+            "IP_inc",
+            "IP_read",
+            "MAR_write",
+            "MAR_read",
+            "PAGE_read",
+            "MEM_read",
+            "MDR0_read",
+            "MDR0_write",
+            "MDR0-REG_ID",
+            "REG_read",
+            "REG_OUT-MDR1",
+            "MDR1_write"
+        ],
+        [
+            "MDR1_read",
+            "MDR1-MDR0",
+            "MDR0_write",
+            "MDR0_read",
+            "PAGE_write",
+            "IP_read",
+            "MAR_write",
+            "MAR_read",
+            "PAGE_read",
+            "MEM_read",
+            "CU_endInstruction"
+        ]
+    ],
+    "IN":[
+        [
+            "IP_inc",
+            "IP_read",
+            "MAR_write",
+            "MAR_read",
+            "PAGE_read",
+            "MEM_read",
+            "MDR0_write",
+            "MEM_read2",
+            "MDR1_write",
+            "MDR0_read",
+            "MDR0-IN_REG_IN",
+            "MDR1_read",
+            "MDR1-REG_ID",
+            "REG_write"
+        ],
+        [
+            "IP_inc"
+        ],
+        [
+            "IP_inc",
+            "IP_read",
+            "MAR_write",
+            "MAR_read",
+            "PAGE_read",
             "MEM_read",
             "CU_endInstruction"
         ]
     ]
 }
+# Don't define hlt in here because I'll just have it hard wired in the CPU to easily keep the opcode as 0xFF (TEMPORARY)
 
-microinstructions: list[str] = [
-	"IP_inc",
-	"IP_read",
-	"IP_write",
-	"SP_inc",
-	"SP_dec",
-	"SP_read",
-	"SP_write",
-	"MAR_read",
-	"MAR_write",
-	"MDR0_read",
-	"MDR0_write",
-	"MDR0_zero",
-	"MDR1_read",
-	"MDR1_write",
-	"MDR1_zero",
-	"MDR2_read",
-	"MDR2_write",
-	"MDR2_zero",
-	"MEM_read",
-	"MEM_read2",
-	"MEM_write",
-	"MDR0-MEM_IN",
-	"MDR1-MEM_IN",
-	"MDR2-MEM_IN",
-	"MDR0-REG_IN",
-	"MDR1-REG_IN",
-	"MDR2-REG_IN",
-	"MAR-REG_ID",
-	"MDR0-REG_ID",
-	"MDR1-REG_ID",
-	"MDR2-REG_ID",
-	"REG_OUT-MAR",
-	"REG_OUT-MDR0",
-	"REG_OUT-MDR1",
-	"REG_OUT-MDR2",
-	"REG_read",
-	"REG_write",
-	"MAR-MDR0",
-	"MAR-MDR1",
-	"MAR-MDR2",
-	"MDR0-MAR",
-	"MDR0-MDR1",
-	"MDR0-MDR2",
-	"MDR1-MAR",
-	"MDR1-MDR0",
-	"MDR1-MDR2",
-	"MDR2-MAR",
-	"MDR2-MDR0",
-	"MDR2-MDR1",
-	"MAR-ALU_IN0",
-	"MDR0-ALU_IN0",
-	"MDR1-ALU_IN0",
-	"MDR2-ALU_IN0",
-	"MAR-ALU_IN1",
-	"MDR0-ALU_IN1",
-	"MDR1-ALU_IN1",
-	"MDR2-ALU_IN1",
-	"ALU_SELECT 0",
-	"ALU_SELECT 1",
-	"ALU_SELECT 2",
-	"ALU_SELECT 3",
-	"ALU_SELECT 4",
-	"ALU_SELECT 5",
-	"ALU_SELECT 6",
-	"ALU_SELECT 7",
-	"ALU_SELECT 8",
-	"ALU_SELECT 9",
-	"ALU_SELECT 10",
-	"ALU_SELECT 11",
-	"ALU_read",
-	"ALU_write",
-	"ALU_readFlags",
-	"ALU_OUT-MAR",
-	"ALU_OUT-MDR0",
-	"ALU_OUT-MDR1",
-	"ALU_OUT-MDR2",
-	"ALU_RMAINDR-MAR",
-	"ALU_RMAINDR-MDR0",
-	"ALU_RMAINDR-MDR1",
-	"ALU_RMAINDR-MDR2",
-	"CU_endInstruction"
-]
+# 72 microinstructions, one of which(ALU_SELECT) is 8 bits, so add 7
+# last bit is the 79th but because its 0-based, so theres 80 bits total, not 79
+microinstructionBits = 83
 
-# 70 microinstructions, one of which(ALU_SELECT) is 8 bits, so add 7
-microinstructionBits = 77
+
+outputPath: str = "D:/Logisim/8-Bit-CPU/cpu/8-Bit-CPU-INS_ROM"
+
 
 def intToHex(num: int, length: int) -> str:
-	"""intToHex(13, 3) == \"00d\""""
+	"""
+	turns a number into a string, formatted like "" \n 
+	intToHex(13, 3) == \"00d\"
+	""" # Yes, the \n has to be there.	¯\_(ツ)_/¯
+
 	return format(num, f"#0{length+2}x")[2:]
+
+
 def splitByBin(num: int, bit: int) -> tuple[int, int]:
-	binStr: str = format(num, f"#0{microinstructionBits + 2}b")
-	a = len(binStr) # test: should be equal to the amount of microinstructionBits + 2
+	"""
+	Turns an int into a binary, and splits the int in twain at the specified bit.\n
+	The 2 new numbers are returned in a tuple
+	"""
+	# Format num into binary string
+	binStr: str = format(num, f"#0{microinstructionBits}b")
+
+	# split the string at the specified bit
 	cutStr: str = binStr[-bit:]
 	cutStr2: str = binStr[2:-bit]
-	b = len(cutStr) # test: should be equal to length
-	bitNum: int = int(cutStr, 2)
-	bitNum2: int = int(cutStr2, 2)
-	return (bitNum, bitNum2)
+	
+	# convert base-2 strings back into ints
+	return (int(cutStr, 2), int(cutStr2, 2))
 
 
-microinstructionIDs: dict[str, int] = {}
-k = 0
-j = 0
-AluSelect = False
-# Populate microinstructionIDs
-for microinstruction in microinstructions:
-	if (not microinstruction.startswith("ALU_SELECT")):
-		if (AluSelect):
-			k += 8
-			AluSelect = False
+# A list of microinstructions, associated with a int corresponding to the
+# bits that will be turned on to indicate that the given microinstruction is enabled
+microinstructionIDs: dict[str, int] = {
 
-		microinstructionIDs[microinstruction] = 1 << k
-		k += 1
-	else:
-		string = microinstruction[-2:]
-		microinstructionIDs[microinstruction] = int(string) << k
+	"IP_inc"			: 0x0001,							# bit 00
+	"IP_read"			: 0x0002,							# bit 01
+	"IP_write"			: 0x0004,							# bit 02
+	"SP_inc"			: 0x0008,							# bit 03
+	"SP_dec"			: 0x0010,							# bit 04
+	"SP_read"			: 0x0020,							# bit 05
+	"SP_write"			: 0x0040,							# bit 06
+	"MAR_read"			: 0x0080,							# bit 07
+	"MAR_write"			: 0x0100,							# bit 08
+	"MDR0_read"			: 0x0200,							# bit 09
+	"MDR0_write"		: 0x0400,							# bit 10
+	"MDR0_zero"			: 0x0800,							# bit 11
+	"MDR1_read"			: 0x1000,							# bit 12
+	"MDR1_write"		: 0x2000,							# bit 13
+	"MDR1_zero"			: 0x4000,							# bit 14
+	"MDR2_read"			: 0x8000,							# bit 15
+	"MDR2_write"		: 0x0001_0000,						# bit 16
+	"MDR2_zero"			: 0x0002_0000,						# bit 17
+	"MEM_read"			: 0x0004_0000,						# bit 18
+	"MEM_read2"			: 0x0008_0000,						# bit 19
+	"MEM_write"			: 0x0010_0000,						# bit 20
+	"MDR0-MEM_IN"		: 0x0020_0000,						# bit 21
+	"MDR1-MEM_IN"		: 0x0040_0000,						# bit 22
+	"MDR2-MEM_IN"		: 0x0080_0000,						# bit 23
+	"MDR0-REG_IN"		: 0x0100_0000,						# bit 24
+	"MDR1-REG_IN"		: 0x0200_0000,						# bit 25
+	"MDR2-REG_IN"		: 0x0400_0000,						# bit 26
+	"MDR0-IN_REG_IN"	: 0x0800_0000,						# bit 27
+	"MDR1-IN_REG_IN"	: 0x1000_0000,						# bit 28
+	"MDR2-IN_REG_IN"	: 0x2000_0000,						# bit 29
+	"MAR-REG_ID"		: 0x4000_0000,						# bit 30
+	"MDR0-REG_ID"		: 0x8000_0000,						# bit 31
+	"MDR1-REG_ID"		: 0x0001_0000_0000,					# bit 32
+	"MDR2-REG_ID"		: 0x0002_0000_0000,					# bit 33
+	"REG_OUT-MAR"		: 0x0004_0000_0000,					# bit 34
+	"REG_OUT-MDR0"		: 0x0008_0000_0000,					# bit 35
+	"REG_OUT-MDR1"		: 0x0010_0000_0000,					# bit 36
+	"REG_OUT-MDR2"		: 0x0020_0000_0000,					# bit 37
+	"REG_read"			: 0x0040_0000_0000,					# bit 38
+	"REG_write"			: 0x0080_0000_0000,					# bit 39
+	"MAR-MDR0"			: 0x0100_0000_0000,					# bit 40
+	"MAR-MDR1"			: 0x0200_0000_0000,					# bit 41
+	"MAR-MDR2"			: 0x0400_0000_0000,					# bit 42
+	"MDR0-MAR"			: 0x0800_0000_0000,					# bit 43
+	"MDR0-MDR1"			: 0x1000_0000_0000,					# bit 44
+	"MDR0-MDR2"			: 0x2000_0000_0000,					# bit 45
+	"MDR1-MAR"			: 0x4000_0000_0000,					# bit 46
+	"MDR1-MDR0"			: 0x8000_0000_0000,					# bit 47
+	"MDR1-MDR2"			: 0x0001_0000_0000_0000,			# bit 48
+	"MDR2-MAR"			: 0x0002_0000_0000_0000,			# bit 49
+	"MDR2-MDR0"			: 0x0004_0000_0000_0000,			# bit 50
+	"MDR2-MDR1"			: 0x0008_0000_0000_0000,			# bit 51
+	"MAR-ALU_IN0"		: 0x0010_0000_0000_0000,			# bit 52
+	"MDR0-ALU_IN0"		: 0x0020_0000_0000_0000,			# bit 53
+	"MDR1-ALU_IN0"		: 0x0040_0000_0000_0000,			# bit 54
+	"MDR2-ALU_IN0"		: 0x0080_0000_0000_0000,			# bit 55
+	"MAR-ALU_IN1"		: 0x0100_0000_0000_0000,			# bit 56
+	"MDR0-ALU_IN1"		: 0x0200_0000_0000_0000,			# bit 57
+	"MDR1-ALU_IN1"		: 0x0400_0000_0000_0000,			# bit 58
+	"MDR2-ALU_IN1"		: 0x0800_0000_0000_0000,			# bit 59
 
-		if (not AluSelect):
-			AluSelect = True
+	# bits 60-67
+	"ALU_SELECT 0"		: 0x0000_0000_0000_0000,			# 000 << 60
+	"ALU_SELECT 1"		: 0x1000_0000_0000_0000,			# 001 << 60
+	"ALU_SELECT 2"		: 0x2000_0000_0000_0000,			# 002 << 60
+	"ALU_SELECT 3"		: 0x3000_0000_0000_0000,			# 003 << 60
+	"ALU_SELECT 4"		: 0x4000_0000_0000_0000,			# 004 << 60
+	"ALU_SELECT 5"		: 0x5000_0000_0000_0000,			# 005 << 60
+	"ALU_SELECT 6"		: 0x6000_0000_0000_0000,			# 006 << 60
+	"ALU_SELECT 7"		: 0x7000_0000_0000_0000,			# 007 << 60
+	"ALU_SELECT 8"		: 0x8000_0000_0000_0000,			# 008 << 60
+	"ALU_SELECT 9"		: 0x9000_0000_0000_0000,			# 009 << 60
+	"ALU_SELECT 10"		: 0xA000_0000_0000_0000,			# 010 << 60
+	"ALU_SELECT 11"		: 0xB000_0000_0000_0000,			# 011 << 60
+	#"ALU_SELECT 128"	: 0x0008_0000_0000_0000_0000,		# 128 << 60
+	#"ALU_SELECT 255"	: 0x000F_F000_0000_0000_0000,		# 255 << 60
+
+	"ALU_read"			: 0x0010_0000_0000_0000_0000,		# bit 68
+	"ALU_write"			: 0x0020_0000_0000_0000_0000,		# bit 69
+	"ALU_readFlags"		: 0x0040_0000_0000_0000_0000,		# bit 70
+	"ALU_OUT-MAR"		: 0x0080_0000_0000_0000_0000,		# bit 71
+	"ALU_OUT-MDR0"		: 0x0100_0000_0000_0000_0000,		# bit 72
+	"ALU_OUT-MDR1"		: 0x0200_0000_0000_0000_0000,		# bit 73
+	"ALU_OUT-MDR2"		: 0x0400_0000_0000_0000_0000,		# bit 74
+	"ALU_RMAINDR-MAR"	: 0x0800_0000_0000_0000_0000,		# bit 75
+	"ALU_RMAINDR-MDR0"	: 0x1000_0000_0000_0000_0000,		# bit 76
+	"ALU_RMAINDR-MDR1"	: 0x2000_0000_0000_0000_0000,		# bit 77
+	"ALU_RMAINDR-MDR2"	: 0x4000_0000_0000_0000_0000,		# bit 78
+	"PAGE_read"			: 0x0008_0000_0000_0000_0000_0000,	# bit 79
+	"PAGE_write"		: 0x0001_0000_0000_0000_0000_0000,	# bit 80
+	"CU_endInstruction"	: 0x0002_0000_0000_0000_0000_0000,	# bit 81
+	"hlt"				: 0x0004_0000_0000_0000_0000_0000,	# bit 82
+}
 
 
+# Create INS_ROM files
 maxCycles: int = 0
-outData: list[list[int]] = [[0] * len(data)]
+for index, name in enumerate(data):
+	# Enumerate through all of the instructions, and find the one with the largest # of cycles
 
-for index,name in enumerate(data):
+	# Get instruction cycles
 	instruc = data[name]
+
+	# Get # of cycles
 	length = len(instruc)
+
 	if (length > maxCycles):
-		for cycle in range(maxCycles, length):
-			with open(f"D:/Logisim/8-Bit-CPU/INS_ROM_{cycle}", "w", encoding="utf-8") as file:
-				file.write("v3.0 hex words addressed\n00:")
-
-			with open(f"D:/Logisim/8-Bit-CPU/INS_ROM2_{cycle}", "w", encoding="utf-8") as file:
-				file.write("v3.0 hex words addressed\n00:")
-
-			outData.append([0] * len(data))
-
 		maxCycles = length
 
+# Create all INS_ROM files necesary to support the largest instruction
+for cycle in range(maxCycles):
+
+	# In Logisim, The INS_ROM is implemented so that there is 1 "ROM" per cycle in the largest
+	# instruction (the instruction that takes the most amount of CPU cycles).
+	# Logisim Evolution only allows a ROM to be at most 64 data bits, but there are 81 bits of
+	# microinstructions, so 2 ROMs have to be used. This means that the files are names like
+	# "INS_ROM_0", "INS_ROM2_0", "INS_ROM_1", "INS_ROM2_1", etc., where the # after the "_" is
+	# the cycle number, and if it's "ROM", then its the first half of the ROM for that cycle,
+	# but if it's "ROM2", its the second half of the ROM for that cycle
+
+	# TL;DR: These are how the files are named because of how the INS_ROM had to implemented
+	# in Logisim Evolution
+
+	# The "w" switch creates the file, and if it already exists, trucates it (clears the file). 
+	with open(f"{outputPath}/INS_ROM_{cycle}", "w", encoding="utf-8") as file:
+		# This is written to the file so the formatting is correctly recognized by Logisim Evolution
+		file.write("v3.0 hex words addressed\n00:")
+
+	with open(f"{outputPath}/INS_ROM2_{cycle}", "w", encoding="utf-8") as file:
+		file.write("v3.0 hex words addressed\n00:")
+
+
+outData: list[list[int]] = [[0] * len(data) for _ in range(maxCycles)]
 
 
 instrucInt: int = 0
-for i, j in enumerate(data):
-	for intCycle in range(len(data[j])):
-		cycleID: int = 0
-		cycle = data[j][intCycle] # if I add a type here, it throws an error when i try to redefine cycle as an int instead of a list[str] at the end of the script
+# Enumerate through each instruction
+for instrucName in data.keys():
+	# Enumerate through each CPU Cycle in the instruction
+	for intCycle in range(len(data[instrucName])):
+
+		cycleID: int = 0 # The intager with active bits to represents each microinstruction in the cycle
+		cycle = data[instrucName][intCycle] # If I add a type here, it throws an error when i try to redefine "cycle" as an int instead of a list[str] at the end of the script
+
 		for microinstruction in cycle:
+			# The jump instructions have microinstructions like "ZF|CF-IP_write".
+			# These represent conditionals that are implemented in the CPU physically,
+			# not the INS_ROM, so these "microinstructions" are simply skipped
 			try:
 				cycleID += microinstructionIDs[microinstruction]
 			except:
-				if j.startswith("J") and microinstruction.endswith("IP_write"):
+				# Check if the "incorrect" microinstruction is actually just a conditional
+				if instrucName.startswith("J") and (microinstruction.endswith("IP_write") or microinstruction.endswith("IP_inc")):
 					continue
+				# If not, output an error
+				raise Exception(f"Invalid microinstruction {microinstruction} in {instrucName}, cycle {intCycle}")
 		
+		# Save the cycle to the output data
 		outData[intCycle][instrucInt] = cycleID
+
+
+	# In Logisim, The INS_ROM is implemented so that there is 1 "ROM" per cycle in the largest
+	# instruction (the instruction that takes the most amount of CPU cycles). The n'th ROM
+	# contains the n'th cycle for each instruction, so this is why in the above line outData
+	# is being addressed by first the cycle, then the instruction, then the actual cycle is a single number
+	# TL;DR: This is done because of how the INS_ROM had to implemented in Logisim Evolution
 	instrucInt += 1
 
-
 for intCycle in range(maxCycles):
+	foo: int = 0
 	cycle = outData[intCycle]
-	k = 0
 	for instruc in cycle:
+		foo += 1
+		# Split the cycleID so the first 64 bits are the "ROM", and the last 18 bits are in the "ROM2"
 		split: tuple[int, int] = splitByBin(instruc, 64)
-		with open(f"D:/Logisim/8-Bit-CPU/INS_ROM_{intCycle}", "a", encoding="utf-8") as file:
+
+		# File naming convention explained earier in script, when the files are created
+		with open(f"{outputPath}/INS_ROM_{intCycle}", "a", encoding="utf-8") as file:
 			file.write(" " + intToHex(split[0], 16))
 			
-		with open(f"D:/Logisim/8-Bit-CPU/INS_ROM2_{intCycle}", "a", encoding="utf-8") as file:
-			file.write(" " + intToHex(split[1], 4))
-		
-		k += 1
+		with open(f"{outputPath}/INS_ROM2_{intCycle}", "a", encoding="utf-8") as file:
+			file.write(" " + intToHex(split[1], 5))

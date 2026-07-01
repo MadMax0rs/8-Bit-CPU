@@ -85,7 +85,7 @@
   <lib desc="#BFH-Praktika" name="9"/>
   <lib desc="#Input/Output-Extra" name="10"/>
   <lib desc="#Soc" name="11"/>
-  <lib desc="file#8-Bit-CPU-INS_ROM\8-Bit-CPU-INS-ROM.circ" name="12"/>
+  <lib desc="file#8-Bit-CPU-INS-ROM.circ" name="12"/>
   <main name="Computer"/>
   <options>
     <a name="gateUndefined" val="ignore"/>

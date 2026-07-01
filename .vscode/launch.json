@@ -16,9 +16,9 @@
 			"name": "Debug: lasm.py with args",
 			"type": "debugpy",
 			"request": "launch",
-			"program": "D:\\Logisim\\8-Bit-CPU\\scripts\\assembler\\lasm.py",
+			"program": "D:\\Logisim\\8-Bit-CPU\\assembler\\lasm.py",
 			"console": "integratedTerminal",
-			"args": "/scripts/asm/memWriteTest.asm"
+			"args": "D:\\Logisim\\8-Bit-CPU\\docs\\examples\\fibonacci\\fibonacci.asm"
 		}
 	]
 }
