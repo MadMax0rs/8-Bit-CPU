@@ -30,10 +30,10 @@ registers: dict[str, int] = {
 	"reg6" : 6,
 	"r6" : 6,
 
-	"p3" : 15,
-	"p2" : 14,
-	"p1" : 13,
-	"p0" : 12,
+	"p3" : 12,
+	"p2" : 13,
+	"p1" : 14,
+	"p0" : 15,
 }
 
 def IsValidHex(string: str) -> bool:
